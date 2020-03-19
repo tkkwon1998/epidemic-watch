@@ -22,7 +22,6 @@ class Maps extends Component {
                 })
             });
     }
-
     /**
      * Renders map using google chart
      *
@@ -53,8 +52,10 @@ class Maps extends Component {
         }
 
         array.unshift(['State', 'Confirmed Cases', 'Tests Done']);  // append headers
+
+        console.log(array);
         
-        var spliced = array.slice(0, 52);   // get first 51 entries
+        var spliced = array.slice(0, 57);   // get first 51 entries
 
         return (
             <div id="map" style={{ display: 'flex', maxWidth: 900 }}>

@@ -17,6 +17,7 @@ function App() {
   
           </div>
         </div>
+        
   
         <div className="main-page">
           <Route exact path="/" component={Maps} />

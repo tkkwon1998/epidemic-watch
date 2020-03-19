@@ -1,5 +1,6 @@
 {
   "name": "epidemic-watch",
+  "homepage": "https://tkkwon1998.github.io/epidemic-watch",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -31,4 +32,5 @@
       "last 1 safari version"
     ]
   }
+  
 }

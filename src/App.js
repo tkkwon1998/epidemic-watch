@@ -10,14 +10,11 @@ function App() {
     <BrowserRouter>
       <div className="App">
       <div className="navigation">
-          <div className="navigation-sub">
-                                          
+          <div className="navigation-sub">                         
             <Link to="/epidemic-watch" className="item">Map</Link>
             <Link to="/info1" className="item">Info</Link>
-  
           </div>
         </div>
-
   
         <div className="main-page">
           <Route exact path="/epidemic-watch" component={Maps} />

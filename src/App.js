@@ -12,15 +12,15 @@ function App() {
       <div className="navigation">
           <div className="navigation-sub">
                                           
-            <Link to="/" className="item">Map</Link>
+            <Link to="/epidemic-watch" className="item">Map</Link>
             <Link to="/info" className="item">Info</Link>
   
           </div>
         </div>
-        
+
   
         <div className="main-page">
-          <Route exact path="/" component={Maps} />
+          <Route exact path="/epidemic-watch" component={Maps} />
           <Route path="/info" component={Info} />
         </div>
       </div>

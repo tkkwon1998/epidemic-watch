@@ -13,7 +13,7 @@ function App() {
           <div className="navigation-sub">
                                           
             <Link to="/epidemic-watch" className="item">Map</Link>
-            <Link to="/info" className="item">Info</Link>
+            <Link to="/info1" className="item">Info</Link>
   
           </div>
         </div>
@@ -21,7 +21,7 @@ function App() {
   
         <div className="main-page">
           <Route exact path="/epidemic-watch" component={Maps} />
-          <Route path="/info" component={Info} />
+          <Route path="/info1" component={Info} />
         </div>
       </div>
     </BrowserRouter>

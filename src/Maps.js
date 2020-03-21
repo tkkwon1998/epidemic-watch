@@ -38,7 +38,7 @@ class Maps extends Component {
             return Object.values(item);
           });
 
-        var idxToDelete = [0,3,4,5,7];  // array of columns to delete
+        var idxToDelete = [0,3,4,5,6,8];  // array of columns to delete
 
         for (var i = 0; i < array.length; i++) {    // loop to delete indices from array
             var temp = array[i];
@@ -53,10 +53,11 @@ class Maps extends Component {
 
         array.unshift(['State', 'Confirmed Cases', 'Tests Done']);  // append headers
 
-        console.log(array);
+        
         
         var spliced = array.slice(0, 57);   // get first 57 entries
 
+        console.log(spliced);
         return (
             <div id="map" style={{ display: 'flex', maxWidth: 900 }}>
                 <Chart

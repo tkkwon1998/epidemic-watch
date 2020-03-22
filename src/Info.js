@@ -63,7 +63,7 @@ class Maps extends Component {
                     link=""
                     image=""
                     title="hello"
-                    category="yessir"
+                    category=""
                 />
             </div>
         )

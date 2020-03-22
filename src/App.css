@@ -48,4 +48,5 @@ a:hover {
 .tile {
   border-style: solid;
   border-radius: 10px;
+  width: 40px;
 }

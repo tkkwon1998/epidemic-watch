@@ -59,20 +59,23 @@ class Maps extends Component {
 
         console.log(spliced);
         return (
-            <div id="map" style={{ display: 'flex', maxWidth: 900 }}>
-                <Chart
-                    width={1000}
-                    height={700}
-                    chartType="GeoChart"
-                    loader={<div>Loading Chart</div>}
-                    data={ spliced }
-                    options={{
-                        sizeAxis: { minValue: 0, maxValue: 100 },
-                        region: 'US',
-                        resolution: 'provinces',
-                        colorAxis: {colors: ['#edf8b1', '#7fcdbb', '#2c7fb8']},
-                    }}
-                />
+            <div>
+                <div id="map" style={{ display: 'flex', maxWidth: 900 }}>
+                    <Chart
+                        width={950}
+                        height={625}
+                        chartType="GeoChart"
+                        loader={<div>Loading Chart</div>}
+                        data={ spliced }
+                        options={{
+                            sizeAxis: { minValue: 0, maxValue: 100 },
+                            region: 'US',
+                            resolution: 'provinces',
+                            colorAxis: {colors: ['#fee8c8', '#fdbb84', '#e34a33']},
+                            backgroundColor: { fill:'transparent' },
+                        }}
+                    />
+                </div>
             </div>
         )
     }

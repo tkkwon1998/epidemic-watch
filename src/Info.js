@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Chart from "react-google-charts";
+import Tile from "./Tiles.js"
 
 class Maps extends Component {
 
@@ -58,7 +59,12 @@ class Maps extends Component {
         
         return (
             <div id="stats">
-                
+                <Tile
+                    link=""
+                    image=""
+                    title="hello"
+                    category="yessir"
+                />
             </div>
         )
     }

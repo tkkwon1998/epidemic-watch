@@ -1,13 +1,16 @@
 /* Styling for maps.js */
 
+body {background-color: #343f4c;}
+
 #map {
   position: relative;
-  top: 10px;
-  left: 20%;
   text-align: center;
+  margin: auto;
+  top: 5px;
 }
 
 .navigation {
+  color: white;
   text-align: center;
 }
 
@@ -21,9 +24,12 @@ a:hover {
 }
 
 .item {
+  border-style: solid;
+  border-width: thin;
+  border-radius: 4px;
+  color: white;
   position: relative;
   margin: 5px;
-  top: 10px;
 }
 
 .navi {
@@ -31,4 +37,15 @@ a:hover {
   height: 30px;
 }
 
+.title {
+  color: white;
+  position: relative;
+  text-align: center;
+}
+
 /* Styling for info.js */
+
+.tile {
+  border-style: solid;
+  border-radius: 10px;
+}

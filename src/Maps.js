@@ -64,7 +64,7 @@ class Maps extends Component {
                 <div id="map" style={{ display: 'flex', maxWidth: 900 }}>
                     <Chart
                         width={950}
-                        height={625}
+                        height={590}
                         chartType="GeoChart"
                         loader={<div>Loading Chart</div>}
                         data={ spliced }

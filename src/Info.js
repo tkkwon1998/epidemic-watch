@@ -33,7 +33,7 @@ class Maps extends Component {
         var { items, isLoaded } = this.state;
 
         if (!isLoaded) {   // Check if data is loaded
-            return <div>Loading...</div>
+            return <div></div>
         }
 
         var array = items.map(function(item) {  // JSON to array conversion
@@ -67,16 +67,17 @@ class Maps extends Component {
         
         var spliced = array.slice(0, 57);   // get first 57 entries
 
+        var sw = window.screen.width;
+
         console.log(spliced);
         return (
             <div>
                 <div id="graph-title" className="title">Number of Cases in US</div>
                 <div id="graph" style={{ display: 'flex', maxWidth: 900 }}>
                     <Chart
-                        width={1400}
-                        height={625}
+                        width={sw}
+                        height={sw*0.4}
                         chartType="LineChart"
-                        loader={<div>Loading Chart</div>}
                         data={ spliced }
                         options={{
                             sizeAxis: { minValue: 0, maxValue: 100 },
@@ -90,6 +91,7 @@ class Maps extends Component {
                                 textStyle:{color: '#FFF'},
                                 title: "Number of People",
                                 titleTextStyle: { color: '#FFF' },
+                                gridlineColor: '#FFF',
                             },
                             backgroundColor: { fill:'transparent' , stroke: 2},
                             animation: {

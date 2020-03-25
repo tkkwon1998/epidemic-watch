@@ -38,7 +38,7 @@ class Maps extends Component {
             return Object.values(item);
           });
 
-        var idxToDelete = [0,3,4,5,6,8,9];  // array of columns to delete
+        var idxToDelete = [0,3,4,5,6,8,9,10,11,12,13,14];  // array of columns to delete
 
         for (var i = 0; i < array.length; i++) {    // loop to delete indices from array
             var temp = array[i];

@@ -79,10 +79,12 @@ class Maps extends Component {
                             hAxis: {
                                 textStyle:{color: '#FFF'},
                                 title: "Days",
+                                titleTextStyle: { color: '#FFF' },
                             },
                             vAxis: {
                                 textStyle:{color: '#FFF'},
                                 title: "Cases",
+                                titleTextStyle: { color: '#FFF' },
                             },
                             backgroundColor: { fill:'transparent' , stroke: 2},
                             animation: {

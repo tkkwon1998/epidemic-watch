@@ -40,23 +40,28 @@ class Maps extends Component {
             return Object.values(item);
           });
 
-        var idxToDelete = [0,1,3,4,5,6,7,8];  // array of columns to delete
+        var idxToDelete = [0,1,3,4,5,6,8];  // array of columns to delete
         var counter = 22;
 
         for (var i = 0; i < array.length; i++) {    // loop to delete indices from array
             var temp = array[i];
             array[i] = [];
+            array[i].push(counter);
+            counter = counter - 1;
             for(var j = 0 ; j < temp.length ; j++){
                 if(idxToDelete.indexOf(j) == -1)    // dont delete
-                {   
-                    array[i].push(counter);
-                    counter = counter - 1;
-                    array[i].push(temp[j]);
+                {  
+                    if (temp[j] == null) {
+                        array[i].push(0);
+                    }
+                    else {
+                        array[i].push(temp[j]);
+                    }
                 }
             }
         }
 
-        array.unshift(['Day', 'Cases']);  // append headers
+        array.unshift(['Day', 'Cases', "Deaths"]);  // append headers
 
         
         
@@ -75,15 +80,15 @@ class Maps extends Component {
                         data={ spliced }
                         options={{
                             sizeAxis: { minValue: 0, maxValue: 100 },
-                            lineWidth: 10,
+                            lineWidth: 6,
                             hAxis: {
                                 textStyle:{color: '#FFF'},
-                                title: "Days",
+                                title: "Days since March 4th",
                                 titleTextStyle: { color: '#FFF' },
                             },
                             vAxis: {
                                 textStyle:{color: '#FFF'},
-                                title: "Cases",
+                                title: "Number of People",
                                 titleTextStyle: { color: '#FFF' },
                             },
                             backgroundColor: { fill:'transparent' , stroke: 2},

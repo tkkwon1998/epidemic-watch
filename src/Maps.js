@@ -60,6 +60,7 @@ class Maps extends Component {
         console.log(spliced);
         return (
             <div>
+                <div id="graph-title" className="title">Cases by State</div>
                 <div id="map" style={{ display: 'flex', maxWidth: 900 }}>
                     <Chart
                         width={950}

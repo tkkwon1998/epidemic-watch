@@ -9,6 +9,10 @@ body {background-color: #343f4c;}
   top: 5px;
 }
 
+#graph-title {
+  top: 30px;
+}
+
 .navigation {
   color: white;
   text-align: center;
@@ -49,4 +53,6 @@ a:hover {
   border-style: solid;
   border-radius: 10px;
   width: 40px;
+  background-color: thistle;
 }
+

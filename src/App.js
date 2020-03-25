@@ -12,8 +12,8 @@ function App() {
       <div className="navigation">
       <h1 className="title">COVID-19 Tracker</h1>
           <div className="navigation-sub">                         
-            <Link to="/epidemic-watch" className="item">Map</Link>
-            <Link to="/info1" className="item">Info</Link>
+            <Link to="/epidemic-watch" className="item">Cases by State</Link>
+            <Link to="/info1" className="item">US Graph</Link>
           </div>
         </div>
   

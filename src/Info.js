@@ -68,7 +68,7 @@ class Maps extends Component {
                 <div id="graph-title" className="title">Number of Cases in US</div>
                 <div id="graph" style={{ display: 'flex', maxWidth: 900 }}>
                     <Chart
-                        width={1600}
+                        width={1400}
                         height={625}
                         chartType="LineChart"
                         loader={<div>Loading Chart</div>}

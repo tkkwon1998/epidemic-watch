@@ -13,7 +13,7 @@ class Maps extends Component {
      * Fetches data from API and loads state.
      */
     componentDidMount() {
-        fetch('https://covidtracking.com/api/states/daily')
+        fetch('https://api.covidtracking.com/v1/states/current.json')
             .then(res => res.json())
             .then(data => {
                 this.setState({
@@ -38,7 +38,7 @@ class Maps extends Component {
             return Object.values(item);
           });
 
-        var idxToDelete = [0,3,4,5,6,7,8,9,10,11,12,13,14,15,16,18,19,20,21,22,23,24];  // array of columns to delete
+        var idxToDelete = [0,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54];  // array of columns to delete
 
         for (var i = 0; i < array.length; i++) {    // loop to delete indices from array
             var temp = array[i];
@@ -51,7 +51,7 @@ class Maps extends Component {
             }
         }
 
-        array.unshift(['State', 'Confirmed Cases', 'Tests Done']);  // append headers
+        array.unshift(['State', 'Total Confirmed Cases', 'Daily New Cases']);  // append headers
 
         
         

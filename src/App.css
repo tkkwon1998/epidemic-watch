@@ -13,6 +13,10 @@ body {background-color: #343f4c;}
   top: 30px;
 }
 
+#about {
+  top: 70px;
+}
+
 .navigation {
   color: white;
   text-align: center;
@@ -20,7 +24,7 @@ body {background-color: #343f4c;}
 
 a {
   text-decoration: none;
-  color: black;
+  color: lightseagreen;
 }
 
 a:hover {

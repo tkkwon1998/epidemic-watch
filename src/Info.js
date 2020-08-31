@@ -15,7 +15,7 @@ class Maps extends Component {
      * Fetches data from API and loads state.
      */
     componentDidMount() {
-        fetch('https://covidtracking.com/api/us/daily')
+        fetch('https://api.covidtracking.com/v1/us/daily.json')
             .then(res => res.json())
             .then(data => {
                 this.setState({
@@ -40,7 +40,7 @@ class Maps extends Component {
             return Object.values(item);
           });
 
-        var idxToDelete = [0,1,3,4,5,6,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24];  // array of columns to delete
+        var idxToDelete = [0,1,3,4,5,6,7,8,9,10,11,13,14,15,16,17,18,19,20,21,22,23,24];  // array of columns to delete
         var counter = 22;
 
         for (var i = 0; i < array.length; i++) {    // loop to delete indices from array
@@ -61,7 +61,7 @@ class Maps extends Component {
             }
         }
 
-        array.unshift(['Day', 'Cases', "Deaths"]);  // append headers
+        array.unshift(['Cases','Date']);  // append headers
 
         
         
@@ -72,42 +72,10 @@ class Maps extends Component {
         console.log(spliced);
         return (
             <div>
-                <div id="graph-title" className="title">Number of Cases in US</div>
-                <div id="graph" style={{ display: 'flex', maxWidth: 900 }}>
-                    <Chart
-                        width={sw}
-                        height={sw*0.4}
-                        chartType="LineChart"
-                        data={ spliced }
-                        options={{
-                            sizeAxis: { minValue: 0, maxValue: 100 },
-                            lineWidth: 6,
-                            hAxis: {
-                                textStyle:{color: '#FFF'},
-                                title: "Days since March 4th",
-                                titleTextStyle: { color: '#FFF' },
-                            },
-                            vAxis: {
-                                textStyle:{color: '#FFF'},
-                                title: "Number of People",
-                                titleTextStyle: { color: '#FFF' },
-                                gridlineColor: '#FFF',
-                            },
-                            backgroundColor: { fill:'transparent' , stroke: 2},
-                            animation: {
-                                duration: 1000,
-                                easing: 'out',
-                                startup: true
-                            },
-                            curveType: 'function',
-                            legend: {
-                                textStyle: {
-                                    color: '#FFF',
-                                }
-                            }
-                        }}
-                    />
-                </div>
+                <div id="graph-title" className="title">About</div>
+
+                <div id="about" className="title">All data taken from <a href="https://covidtracking.com/">The Covid Tracking Project API</a>.</div>
+                <div id="about" className="title">Github repo can be found <a href="https://github.com/tkkwon1998/epidemic-watch">here</a>.</div>            
             </div>
         )
     }

@@ -10,10 +10,10 @@ function App() {
     <BrowserRouter>
       <div className="App">
       <div className="navigation">
-      <h1 className="title">COVID-19 Tracker</h1>
+      <h1 className="title">COVID-19 MAP OF U.S.</h1>
           <div className="navigation-sub">                         
             <Link to="/epidemic-watch" className="item">Cases by State</Link>
-            <Link to="/info1" className="item">US Graph</Link>
+            <Link to="/info1" className="item">About</Link>
           </div>
         </div>
   
